@@ -1,167 +1,243 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f2f3fb" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teo Perić</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link href="assets/style/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="container">
-      
-        <!---
-        <div class="picture">
-          <img
-            src="assets/photo.jpg"
-          />
-        </div>
-        -->
-        
-        <div class="name" translate="no">
-        Teo Perić
-        </div>
-        <div class="info-box active">
-          About me
-          <div class="toggle">
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <div>
-            <br />
-            <div class="details">
-              <ul>
-                <li class="about">
-                  I am a Mechatronics Technician from Croatia currently studying at Syddansk Universitet. You can see more about my vocational qualifications <a href="https://www.europass.hr/userfiles/files/2023/EN_2023/19_041524_Tehnicar_za_mehatroniku_EN.pdf">here</a>.
-                </li>
-                
-                <li>
-                  <b>Certifications:</b>
-                  <div class="projects">
-                    <a
-                      href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-JP8MAEXW9S"
-                      class="project"
-                    >
-                      <ul>
-                        <li>SolidWorks CSWA Mechanical Design Associate</li>
-                        <li><small>Obtained March 12 2024</small></li>
-                      </ul>
-                    </a>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-                    <a
-                      class="project"
-                    >
-                      <ul>
-                        <li>TOEFL iBT</li>
-                        <li><small>Obtained September 23 2023, available upon request</small></li>
-                      </ul>
-                    </a>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
 
-                    <a
-                      href="https://www.europass.hr/userfiles/files/2023/EN_2023/19_041524_Tehnicar_za_mehatroniku_EN.pdf"
-                      class="project"
-                    >
-                      <ul>
-                        <li>Europass certificate supplement (041524)</li>
-                        <li><small>Obtained May 29 2024</small></li>
-                      </ul>
-                    </a>
-                  </div>
-                </li>
-                
-                 <li>
-                  <b>Experience:</b>
-                  <div class="projects">
-                    <a
-                      href="a_le_coq.html"
-                      class="project"
-                    >
-                      <ul>
-                        <li>A. Le Coq | Mechatronics Technician (Internship)</li>
-                        <li><small>March 2023 | Tartu, Estonia</small></li>
-                      </ul>
-                    </a>
-                  </div>
-                </li>
-                
-                <li>
-                  <b>Projects:</b>
-                  <div class="projects">
-                  
-                    <a
-                      href="gear_hackathon_2024.html"
-                      class="project"
-                    >
-                      <ul>
-                        <li>G.E.A.R. Hackathon 2024</li>
-                        <li><small>November 2024 | Sønderborg, Denmark</small></li>
-                      </ul>
-                    </a>
-					
-					<a
-                      href="graduation_project_and_thesis.html"
-                      class="project"
-                    >
-                      <ul>
-                        <li>Graduation Thesis and Project</li>
-                        <li><small>September 2023 - May 2024 | Varaždin, Croatia</small></li>
-                      </ul>
-                    </a>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-                    <a
-                      href="solar_panel_installation.html"
-                      class="project"
-                    >
-                      <ul>
-                        <li>Solar panel installation</li>
-                        <li><small>Varaždin, Croatia</small></li>
-                      </ul>
-                    </a>
-                    
-                    <a
-                      href="abb_robot_hand_programming.html"
-                      class="project"
-                    >
-                      <ul>
-                        <li>ABB Robot Hand Programming</li>
-                        <li><small>Varaždin, Croatia</small></li>
-                      </ul>
-                    </a>
-                    
-                    <a
-                      href="arduino_midi_synthesizer.html"
-                      class="project"
-                    >
-                      <ul>
-                        <li>Arduino MIDI Synthesizer</li>
-                        <li><small>Varaždin, Croatia</small></li>
-                      </ul>
-                    </a>
-                    
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: normal;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .name-thin {
+            font-weight: 300;
+        }
+
+        .name-bold {
+            font-weight: bold;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .contact-info .phone {
+            order: 0;
+        }
+
+        .contact-info .email {
+            order: -1;
+        }
+
+        .contact-info .linkedin {
+            order: 1;
+        }
+
+        .contact-info a {
+            color: #34495e;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info a:hover {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .contact-info a svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .projects-section {
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .project-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .project-meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .project-preview {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><span class="name-thin">Teo</span> <span class="name-bold">Perić</span></h1>
+        <div class="contact-info">
+            <a href="mailto:teoperic@protonmail.com" class="email">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                teoperic@protonmail.com
+            </a>
+            <a href="tel:+4536663924" class="phone">+45 36 66 39 24</a>
+            <a href="https://www.linkedin.com/in/teo-peric/" target="_blank" class="linkedin">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+            </a>
         </div>
-        <div class="social-media">
-          <a href="mailto:teoperic@protonmail.com">
-            <div><i class="fa-solid fa-envelope"></i>Email</div>
-          </a>
-          <a href="https://www.linkedin.com/in/teo-peric"
-            ><div><i class="fa-brands fa-linkedin-in"></i>LinkedIn</div>
-          </a>
+    </header>
+
+    <section class="projects-section">
+        <h2 class="section-title">Projects & Experience</h2>
+        <div class="projects-grid">
+            <a href="atinel_automation.html" class="project-card">
+                <div class="project-name">Siemens PLC Automation</div>
+                <div class="project-meta">Internship at ATINEL d.o.o. | Varaždin, Croatia</div>
+                <div class="project-preview">
+                    Programmed Siemens S7 PLCs using the STEP7/TIA Portal & WinCC suite.
+                </div>
+            </a>
+
+            <a href="atinel_mechanical_design.html" class="project-card">
+                <div class="project-name">Conveyor Line Design</div>
+                <div class="project-meta">Internship at ATINEL d.o.o. | Varaždin, Croatia</div>
+                <div class="project-preview">
+                    Designed a fully integrated conveyor line in Autodesk Inventor, produced detailed 3D models, realistic renderings, and comprehensive technical drawings.
+                </div>
+            </a>
+
+            <a href="hackathon_2024.html" class="project-card">
+                <div class="project-name">G.E.A.R. Hackathon 2024</div>
+                <div class="project-meta">Hackathon at Syddansk Universitet | Sønderborg, Denmark</div>
+                <div class="project-preview">
+                    Contributed to the mechanical design of a radio-like product.
+                </div>
+            </a>
+
+            <a href="graduation.html" class="project-card">
+                <div class="project-name">Graduation Thesis and Project </div>
+                <div class="project-meta">Electromechanical School Varaždin Thesis | Varaždin, Croatia</div>
+                <div class="project-preview">
+                    Designed and implemented a pneumatic control system with four cylinders.
+                </div>
+            </a>
+
+            <a href="erasmus_estonia.html" class="project-card">
+                <div class="project-name">Erasmus Exchange for Mechatronics Technicians</div>
+                <div class="project-meta">Internship at A. Le Coq. | Tartu, Estonia</div>
+                <div class="project-preview">
+                    Automated a line using Siemens S7-1200 PLCs that sorted empty and full bottles on a bottling line..
+                </div>
+            </a>
+
+            <a href="arduino_macro.html" class="project-card">
+                <div class="project-name">Arduino Macro Keyboard</div>
+                <div class="project-meta">Sønderborg, Denmark</div>
+                <div class="project-preview">
+                    Designed the PCB for a custom Arduino-powered macro keyboard and wrote drivers for Windows and Linux.
+                </div>
+            </a>
+
+            <a href="arduino_midi.html" class="project-card">
+                <div class="project-name">Arduino MIDI Synthesizer</div>
+                <div class="project-meta">Varaždin, Croatia</div>
+                <div class="project-preview">
+                    Made a simple Arduino-powered MIDI keyboard.
+                </div>
+            </a>
+
         </div>
-      </div>
-    </div>
-    <script src="assets/js/script.js"></script>
-  </body>
+    </section>
+</div>
+</body>
 </html>
